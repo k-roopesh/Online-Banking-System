@@ -1,0 +1,253 @@
+/* Basic Reset and Variables */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --light-bg: #f8f9fa;
+    --dark-text: #212529;
+    --card-bg: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Authentication View Styling --- */
+#auth-view {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-box {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-box h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.auth-box input, .auth-box select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.switch-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+/* --- Button Styling --- */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    margin-right: 10px;
+}
+.secondary-btn:hover {
+    background-color: #5a6268;
+}
+
+.logout-btn {
+    background-color: var(--danger-color);
+    color: white;
+    padding: 8px 12px;
+}
+
+.quick-btn {
+    width: 48%;
+    padding: 8px;
+    background-color: var(--light-bg);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.quick-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* --- Dashboard Header/Navbar --- */
+header {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.nav-links button {
+    margin-left: 10px;
+}
+
+.nav-btn {
+    background: none;
+    color: var(--dark-text);
+    border: none;
+    padding: 8px 15px;
+    font-size: 1em;
+}
+.nav-btn:hover, .nav-btn.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* --- Dashboard Content --- */
+.dashboard-content {
+    padding-top: 30px;
+}
+
+.content-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Account Summary */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.account-card {
+    border: 1px solid #dee2e6;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.balance-label {
+    margin-top: 10px;
+    color: var(--secondary-color);
+}
+
+.balance-amount {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: var(--success-color);
+    margin-bottom: 15px;
+}
+
+.quick-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Fund Transfer Form */
+.form-card {
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-card label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-card input, .form-card select {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Transaction History */
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history-table th, .history-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.history-table th {
+    background-color: #f1f3f5;
+    font-weight: bold;
+}
+
+.positive {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.negative {
+    color: var(--danger-color);
+    font-weight: bold;
+}
+
+/* Utility Class */
+.hidden {
+    display: none !important;
+}
